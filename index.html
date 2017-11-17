@@ -8,10 +8,9 @@
       var el = document.getElementById('server-time');
       var el = document.getElementById('spacebar-pressed');
 
-	  $(window).keydown(function(event){
-	    alert(event.keyCode);
+	  window.addEventListener('keydown', function(event){
 	    if (event.keyCode == 32){
-	      socket.emit('bang'); 
+	      socket.emit('bang');
 	    }
 	  });
 
@@ -21,7 +20,17 @@
 
 	  socket.on('play', function () {
         el.innerHTML = 'Spacebar Pressed!'
+        document.body.style.background = getRandomColor();
 	  });
+
+	  function getRandomColor() {
+		var letters = '0123456789ABCDEF';
+		var color = '#';
+		for (var i = 0; i < 6; i++) {
+		  color += letters[Math.floor(Math.random() * 16)];
+		}
+		return color;
+      }
     </script>
   </body>
 </html>
