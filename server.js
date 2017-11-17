@@ -13,6 +13,10 @@ const io = socketIO(server);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
+  socket.on('bang', function(){
+    console.log('bang');
+    io.emit('play');
+  });
   socket.on('disconnect', () => console.log('Client disconnected'));
 });
 

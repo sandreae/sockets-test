@@ -1,13 +1,27 @@
 <html>
   <body>
     <p id='server-time'></p>
+    <p id='spacebar-pressed'></p>
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
       var el = document.getElementById('server-time');
+      var el = document.getElementById('spacebar-pressed');
+
+	  $(window).keydown(function(event){
+	    alert(event.keyCode);
+	    if (event.keyCode == 32){
+	      socket.emit('bang'); 
+	    }
+	  });
+
       socket.on('time', function(timeString) {
         el.innerHTML = 'Server time: ' + timeString;
       });
+
+	  socket.on('play', function () {
+        el.innerHTML = 'Spacebar Pressed!'
+	  });
     </script>
   </body>
 </html>
