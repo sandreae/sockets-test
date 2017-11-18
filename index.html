@@ -8,7 +8,7 @@
   <body>
     <p id='server-time'></p>
     <script src="/socket.io/socket.io.js"></script>
-    <video id="myVideo" width="320" height="176" autoplay loop muted playsinline>
+    <video id="myVideo" width="320" height="176" loop muted playsinline>
       <source src="videos/drill.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -19,36 +19,129 @@
     var video = document.getElementById("myVideo"); 
     var el = document.getElementById('server-time');
 
-	  window.addEventListener('keydown', function(event){
-	    if (event.keyCode == 32){
-	      socket.emit('bang');
-	    }
-	  });
+    window.addEventListener('keydown', function(event){
+      if (event.keyCode == 32){
+        socket.emit('bang');
+      }
+    });
 
     socket.on('time', function(timeString) {
       el.innerHTML = 'Server time: ' + timeString;
     });
 
-	  socket.on('play', function () {
+    socket.on('play', function () {
       if (video.paused) {
         console.log("play")
         video.play();
-        video.style.display = "inline"; 
+        video.style.display = "inline";
+        sources.source1.connect(context.destination)
       } else {
         video.pause();
         video.style.display = "none"; 
-      }	  
+        sources.source1.disconnect(context.destination)
+      }   
     });
 
-	  function getRandomColor() {
-		var letters = '0123456789ABCDEF';
-		var color = '#';
-		for (var i = 0; i < 6; i++) {
-		  color += letters[Math.floor(Math.random() * 16)];
-		}
-
-		return color;
+    function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
     }
+
+    return color;
+    }
+    </script>
+
+    <script type="text/javascript">
+
+      window.onload = init;
+      var context;
+      var bufferLoader
+      var sources = {}
+
+      function init() {
+        // Fix up prefixing
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+        context = new AudioContext();
+
+        bufferLoader = new BufferLoader(
+          context,
+          [
+            'audio/test.mp3',
+            'audio/test.mp3'
+          ],
+          finishedLoading
+          );
+
+        bufferLoader.load();
+      }
+
+      function finishedLoading(bufferList) {
+        // Create two sources and play them both together.
+        var source1 = context.createBufferSource();
+        var source2 = context.createBufferSource();
+        source1.buffer = bufferList[0];
+        source2.buffer = bufferList[1];
+
+        // source1.connect(context.destination);
+        // source2.connect(context.destination);
+        source1.start(0);
+
+        //source2.start(0);
+        sources.source1 = source1
+      }
+    </script>
+
+    <script type="text/javascript">
+      function BufferLoader(context, urlList, callback) {
+  this.context = context;
+  this.urlList = urlList;
+  this.onload = callback;
+  this.bufferList = new Array();
+  this.loadCount = 0;
+}
+
+BufferLoader.prototype.loadBuffer = function(url, index) {
+  // Load buffer asynchronously
+  var request = new XMLHttpRequest();
+  request.open("GET", url, true);
+  request.responseType = "arraybuffer";
+
+  var loader = this;
+
+  request.onload = function() {
+    // Asynchronously decode the audio file data in request.response
+    loader.context.decodeAudioData(
+      request.response,
+      function(buffer) {
+        if (!buffer) {
+          alert('error decoding file data: ' + url);
+          return;
+        }
+        loader.bufferList[index] = buffer;
+        if (++loader.loadCount == loader.urlList.length)
+          loader.onload(loader.bufferList);
+      },
+      function(error) {
+        console.error('decodeAudioData error', error);
+      }
+    );
+  }
+
+  request.onerror = function() {
+    alert('BufferLoader: XHR error');
+  }
+
+  request.send();
+}
+
+BufferLoader.prototype.load = function() {
+  for (var i = 0; i < this.urlList.length; ++i)
+  this.loadBuffer(this.urlList[i], i);
+}
+
+
     </script>
   </body>
 </html>
