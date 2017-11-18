@@ -1,5 +1,6 @@
 # NPM packages folder.
 node_modules
+public/videos
 
 # Local testing
 .env
