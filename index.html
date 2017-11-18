@@ -6,7 +6,7 @@
     <title>LIEBIG12_TEST</title>
   </head>
   <body>
-    <p id='server-time'></p>
+    <p id='loading'>loading.....</p>
     <script src="/socket.io/socket.io.js"></script>
     <video id="myVideo1" width="320" height="176" loop muted playsinline>
       <source src="videos/drill.mp4" type="video/mp4">
@@ -26,8 +26,8 @@
     var video2 = document.getElementById("myVideo2");
     var videoArray = [video1, video2]
     var audioArray = []
-    var el = document.getElementById('server-time');
     var button = document.getElementById('start');
+    var loading = document.getElementById('loading');
 
     window.addEventListener('click', function(){
       audioArray[0].start(0)
@@ -39,10 +39,6 @@
       if (event.keyCode == 32){
         socket.emit('bang');
       }
-    });
-
-    socket.on('time', function(timeString) {
-      el.innerHTML = 'Server time: ' + timeString;
     });
 
     socket.on('play', function (track) {
@@ -106,6 +102,7 @@
         source1.buffer = bufferList[0];
         source2.buffer = bufferList[1];
 
+        loading.style.display = "hidden"
         button.style.display = "inline"
 
         // source1.connect(context.destination);
