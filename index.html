@@ -8,21 +8,30 @@
   <body>
     <p id='server-time'></p>
     <script src="/socket.io/socket.io.js"></script>
-    <video id="myVideo" width="320" height="176" loop muted playsinline>
+    <video id="myVideo1" width="320" height="176" loop muted playsinline>
       <source src="videos/drill.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <video id="myVideo2" width="320" height="176" loop muted playsinline>
+      <source src="videos/snow.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
     <button id="start">Go!</button>
 
 <script> 
 
+    var fresh = true
     var socket = io();
-    var video = document.getElementById("myVideo"); 
+    var video1 = document.getElementById("myVideo1");
+    var video2 = document.getElementById("myVideo2");
+    var videoArray = [video1, video2]
+    var audioArray = []
     var el = document.getElementById('server-time');
     var button = document.getElementById('start');
 
     window.addEventListener('click', function(){
-      sources.source1.start(0)
+      audioArray[0].start(0)
+      audioArray[1].start(0)
       button.style.display = "none"
     });
 
@@ -36,18 +45,25 @@
       el.innerHTML = 'Server time: ' + timeString;
     });
 
-    socket.on('play', function () {
-      if (video.paused) {
-        console.log("play")
-        video.play();
-        video.style.display = "inline";
-        sources.source1.connect(context.destination)
-      } else {
-        video.pause();
-        video.style.display = "none"; 
-        sources.source1.disconnect(context.destination)
-      }   
+    socket.on('play', function (track) {
+      console.log("play")
+      console.log(track)
+      videoArray[track].play();
+      videoArray[track].style.display = "inline";
+      audioArray[track].connect(context.destination)
     });
+
+    socket.on('stop', function (track) {
+      if (fresh !== true) {
+        console.log("stop")
+        console.log(track)
+        videoArray[track].pause();
+        videoArray[track].style.display = "none";
+        audioArray[track].disconnect(context.destination)
+      } else {
+        fresh = false;
+      }
+    })
 
     function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -76,7 +92,7 @@
           context,
           [
             'audio/test.mp3',
-            'audio/test.mp3'
+            'audio/test2.mp3'
           ],
           finishedLoading
           );
@@ -95,8 +111,8 @@
         // source1.connect(context.destination);
         // source2.connect(context.destination);
 
-        //source2.start(0);
-        sources.source1 = source1
+        audioArray = [source1, source2]
+
       }
     </script>
 
