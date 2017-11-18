@@ -9,11 +9,10 @@
     <p id='loading'>loading.....</p>
     <script src="/socket.io/socket.io.js"></script>
     <video id="myVideo1" width="320" height="176" loop muted playsinline>
-      <source src="videos/drill.mp4" type="video/mp4">
+      <source src="videos/black.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-    <video id="myVideo2" width="320" height="176" loop muted playsinline>
-      <source src="videos/snow.mp4" type="video/mp4">
+    <video id="myVideo2" width="320" height="176" loop muted playsinline poster="/images/fuck1.png">
       Your browser does not support HTML5 video.
     </video>
     <button id="start">Go!</button>
@@ -87,8 +86,8 @@
         bufferLoader = new BufferLoader(
           context,
           [
-            'audio/test.mp3',
-            'audio/test2.mp3'
+            'audio/organ.mp3',
+            'audio/squeak.mp3'
           ],
           finishedLoading
           );
@@ -101,6 +100,8 @@
         var source2 = context.createBufferSource();
         source1.buffer = bufferList[0];
         source2.buffer = bufferList[1];
+        source1.loop = true;
+        source2.loop = true;
 
         loading.style.display = "none"
         button.style.display = "inline"
