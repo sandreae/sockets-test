@@ -12,12 +12,19 @@
       <source src="videos/drill.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
+    <button id="start">Go!</button>
 
 <script> 
 
     var socket = io();
     var video = document.getElementById("myVideo"); 
     var el = document.getElementById('server-time');
+    var button = document.getElementById('start');
+
+    window.addEventListener('click', function(){
+      sources.source1.start(0)
+      button.style.display = "none"
+    });
 
     window.addEventListener('keydown', function(event){
       if (event.keyCode == 32){
@@ -73,7 +80,6 @@
           ],
           finishedLoading
           );
-
         bufferLoader.load();
       }
 
@@ -84,9 +90,10 @@
         source1.buffer = bufferList[0];
         source2.buffer = bufferList[1];
 
+        button.style.display = "inline"
+
         // source1.connect(context.destination);
         // source2.connect(context.destination);
-        source1.start(0);
 
         //source2.start(0);
         sources.source1 = source1
