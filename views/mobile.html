@@ -18,9 +18,16 @@
 
     <script>
       var scene1 = document.getElementById('scene1');
+
+      function playVideo() {
+        scene1.style.display = "inline";
+        scene1.play()
+      }
     </script>
 
-    <input type="button" value="Play" onclick="scene1.play()">
+    <input type="button" value="Play" onclick="playVideo()">
+
+
 
   </body>
 </html>
