@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/css/stylesheet.css' />
+    <title>stage 1</title>
+  </head>
+  <body>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <p id='loading'>loading.....</p>
+    <button id="start">Load Media</button>
+    
+    <video id="scene1" class="scene-media" loop muted playsinline oncanplaythrough="mediaReady(this.id)" preload="none">
+      <source src="/videos/string.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <video id="scene2" class="scene-media" loop muted playsinline oncanplaythrough="mediaReady(this.id)" preload="none">
+      <source src="/videos/man.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <audio id="scene3" class="scene-media" loop playsinline oncanplaythrough="mediaReady(this.id)">
+      <source src="/audio/organ.mp3" type="audio/mp3">
+      Your browser does not support HTML5 audio.
+    </audio>
+    
+    <video id="scene4" class="scene-media" loop muted playsinline poster="/images/fuck1.png" oncanplaythrough="mediaReady(this.id)">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <script>
+      var socket = io();
+      const button = document.getElementById('start');
+      const loading = document.getElementById('loading');
+      const scenes = document.getElementsByClassName("scene-media");
+
+      window.addEventListener('keydown', function(event){
+        if (event.keyCode == 32){
+          socket.emit('bang');
+        }
+      });
+
+    </script>
+
+    <script type="text/javascript">
+      function mediaReady(id) {
+        console.log(id + " ready!")
+      }
+    </script>
+
+    <script src="/js/button.js"></script>
+    <script src="/js/loadScenes.js"></script>
+    <script src="/js/socketsRouter.js"></script>
+    <script src="/js/stopScene.js"></script>
+    <script src="/js/playScene.js"></script>
+  </body>
+</html>

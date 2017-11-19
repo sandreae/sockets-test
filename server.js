@@ -3,16 +3,21 @@ const socketIO = require('socket.io');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
+const office = path.join(__dirname, '/views/office.html');
+const fridge = path.join(__dirname, '/views/fridge.html');
 
 const server = express()
   .use(express.static(path.join(__dirname, 'public')))
-  .use((req, res) => res.sendFile(INDEX))
+  .use('/controller', (req, res) => res.sendFile(INDEX))
+  .use('/office', (req, res) => res.sendFile(office))
+  .use('/fridge', (req, res) => res.sendFile(fridge))
+  .use('/stage3', (req, res) => res.sendFile(stage3))
+  .use('/stage4', (req, res) => res.sendFile(stage4))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
 
 var track = 0;
 var myIndex = 0;
-var myArray = [0, 1]
+var myArray = [0, 1, 2, 3]
 
 const io = socketIO(server);
 

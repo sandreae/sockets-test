@@ -8,5 +8,8 @@ video {
 
 
 #start {
+	display: inline;
+}
+#loading {
 	display: none;
 }
