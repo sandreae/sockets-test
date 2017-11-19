@@ -8,45 +8,24 @@
   <body>
 
     <script src="/socket.io/socket.io.js"></script>
-    <input id="load1" type="button" value="Load Media" onclick="scenes.item(0).play()">
-    <input id="load2" type="button" value="Load Media" onclick="buttonPress2()">
-    
-    <video id="scene1" class="scene-media" loop muted playsinline>
-      <source src="/videos/fire.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <video id="scene2" class="scene-media" loop muted playsinline>
-       <source src="/videos/fire.mp4" type="video/mp4">
-    </video>
-
     <script>
       var socket = io();
-      const button1 = document.getElementById('load1');
-      const button2 = document.getElementById('load2');
       const scenes = document.getElementsByClassName("scene-media");
-      const scene1 = document.getElementById('scene1');
-      const scene2 = document.getElementById('scene2');
 
       window.addEventListener('keydown', function(event){
         if (event.keyCode == 32){
           socket.emit('bang');
         }
       });
-      function buttonPress2() {
-        scene2.play()
-        button2.style.display = "none"
-      }
     </script>
 
-    <script type="text/javascript">
-      function mediaReady(id) {
-        console.log(id + " ready!")
-      }
-    </script>
+    <input id="load1" type="button" value="Load Media" onclick="scenes.item(0).play()">
+    
+    <video id="scene1" class="scene-media" loop muted playsinline>
+      <source src="/videos/fire.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
 
-    <script src="/js/loadScenes.js"></script>
-    <script src="/js/socketsRouter.js"></script>
-    <script src="/js/stopScene.js"></script>
-    <script src="/js/playScene.js"></script>
+
   </body>
 </html>
