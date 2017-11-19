@@ -10,7 +10,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
-      const scenes = document.getElementsByClassName("scene-media");
+      const videoScenes = document.getElementsByClassName("scene-video");
 
       window.addEventListener('keydown', function(event){
         if (event.keyCode == 32){
@@ -20,23 +20,8 @@
     </script>
 
     <input id="load1" type="button" value="Load Media" onclick="scenes.item(0).play()">
-    <input id="load2" type="button" value="Load Media" onclick="scenes.item(1).play()">
-    <input id="load3" type="button" value="Load Media" onclick="scenes.item(2).play()">
-    <input id="load4" type="button" value="Load Media" onclick="scenes.item(3).play()">
-    
-    <video id="scene1" class="scene-media" loop muted playsinline>
-      <source src="/videos/fire.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <audio id="scene2" class="scene-media" loop playsinline>
-      <source src="/videos/fire.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </audio>
-    <video id="scene3" class="scene-media" loop muted playsinline>
-      <source src="/videos/fire.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <video id="scene4" class="scene-media" loop muted playsinline>
+
+    <video id="videoScene1" class="scene-video" loop muted playsinline>
       <source src="/videos/fire.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
