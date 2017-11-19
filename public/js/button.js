@@ -1,4 +1,4 @@
-  function buttonPress(){
+  button.addEventListener('click', function(){
 	  for(var i = 0; i < scenes.length; i++) {
 	    var scene = scenes.item(i)
 	    scene.style.display = 'inline'
@@ -7,4 +7,4 @@
 	    console.log("Scene " + i + " tested")
 	  }
     button.style.display = "none"
-  }
+  });
