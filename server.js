@@ -6,6 +6,7 @@ const INDEX = path.join(__dirname, 'index.html');
 const office = path.join(__dirname, '/views/office.html');
 const fridge = path.join(__dirname, '/views/fridge.html');
 const mobile = path.join(__dirname, '/views/mobile.html');
+const gallery = path.join(__dirname, '/views/gallery.html');
 
 const server = express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -13,7 +14,7 @@ const server = express()
   .use('/office', (req, res) => res.sendFile(office))
   .use('/fridge', (req, res) => res.sendFile(fridge))
   .use('/mobile', (req, res) => res.sendFile(mobile))
-  .use('/stage4', (req, res) => res.sendFile(stage4))
+  .use('/gallery', (req, res) => res.sendFile(gallery))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 var track = 0;
