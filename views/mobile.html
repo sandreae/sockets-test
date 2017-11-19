@@ -8,7 +8,6 @@
   <body>
 
     <script src="/socket.io/socket.io.js"></script>
-    <input id="load1" type="button" value="Load Media" onclick="buttonPress1()">
     <input id="load2" type="button" value="Load Media" onclick="buttonPress2()">
     
 
@@ -19,7 +18,6 @@
 
     <script>
       var socket = io();
-      const button1 = document.getElementById('load1');
       const button2 = document.getElementById('load2');
       const scenes = document.getElementsByClassName("scene-media");
       const scene2 = document.getElementById('scene2');
