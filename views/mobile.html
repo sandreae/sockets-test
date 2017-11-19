@@ -10,8 +10,13 @@
     <script src="/socket.io/socket.io.js"></script>
     <input id="start" type="button" value="Load Media" onclick="buttonPress()">
     
-    <video id="scene4" class="scene-media" autoplay loop muted playsinline>
+    <video id="scene1" class="scene-media" autoplay loop muted playsinline>
       <source src="/videos/black.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <video id="scene2" class="scene-media" autoplay loop muted playsinline>
+      <source src="/videos/string.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
 
@@ -19,7 +24,8 @@
       var socket = io();
       const button = document.getElementById('start');
       const scenes = document.getElementsByClassName("scene-media");
-      const scene1 = document.getElementById('scene4');
+      const scene1 = document.getElementById('scene1');
+      const scene1 = document.getElementById('scene2');
 
       window.addEventListener('keydown', function(event){
         if (event.keyCode == 32){
@@ -28,6 +34,7 @@
       });
       function buttonPress() {
         scene1.play()
+        scene2.play()
         button.style.display = "none"
       }
     </script>
