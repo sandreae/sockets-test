@@ -11,18 +11,16 @@
     <p id='loading'>loading.....</p>
     <button id="start">Load Media</button>
     
+    <video id="scene1" class="scene-media" autoplay loop muted playsinline>
+      <source src="/videos/black.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
 
     <script>
-      var socket = io();
-      const button = document.getElementById('start');
-      const loading = document.getElementById('loading');
       var scene1 = document.getElementById('scene1');
     </script>
 
-    <script type="text/javascript">
-      button.addEventListener('click', function(){
-        button.style.display = "none"
-      });
-    </script>
+    <input type="button" value="Play" onclick="scene1.play()">
+
   </body>
 </html>
