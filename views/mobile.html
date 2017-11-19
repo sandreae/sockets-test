@@ -8,7 +8,8 @@
   <body>
 
     <script src="/socket.io/socket.io.js"></script>
-    <input id="start" type="button" value="Load Media" onclick="buttonPress()">
+    <input id="load1" type="button" value="Load Media" onclick="buttonPress1()">
+    <input id="load2" type="button" value="Load Media" onclick="buttonPress2()">
     
     <video id="scene1" class="scene-media" autoplay loop muted playsinline>
       <source src="/videos/black.mp4" type="video/mp4">
@@ -22,7 +23,8 @@
 
     <script>
       var socket = io();
-      const button = document.getElementById('start');
+      const button1 = document.getElementById('load1');
+      const button2 = document.getElementById('load2');
       const scenes = document.getElementsByClassName("scene-media");
       const scene1 = document.getElementById('scene1');
       const scene2 = document.getElementById('scene2');
@@ -32,10 +34,13 @@
           socket.emit('bang');
         }
       });
-      function buttonPress() {
+      function buttonPress1() {
         scene1.play()
+        button1.style.display = "none"
+      }
+      function buttonPress2() {
         scene2.play()
-        button.style.display = "none"
+        button2.style.display = "none"
       }
     </script>
 
