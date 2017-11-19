@@ -21,15 +21,21 @@
 
     <input id="load1" type="button" value="Load Media" onclick="scenes.item(0).play()">
     <input id="load2" type="button" value="Load Media" onclick="scenes.item(1).play()">
+    <input id="load3" type="button" value="Load Media" onclick="scenes.item(2).play()">
     
     <video id="scene1" class="scene-media" loop muted playsinline>
       <source src="/videos/fire.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-    <video id="scene2" class="scene-media" loop muted playsinline>
+    <audio id="scene2" class="scene-media" loop playsinline>
+      <source src="/audio/fridge.mp3" type="audio/mp3">
+      Your browser does not support HTML5 video.
+    </audio>
+    <video id="scene3" class="scene-media" loop muted playsinline>
       <source src="/videos/fire.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
+
     <script src="/js/socketsRouter.js"></script>
     <script src="/js/stopScene.js"></script>
     <script src="/js/playScene.js"></script>
