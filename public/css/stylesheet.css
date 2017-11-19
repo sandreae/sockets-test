@@ -6,6 +6,11 @@ video {
     background-size: cover;
 }
 
+body {
+	padding: 0px;
+	background-color: black;
+}
+
 #start {
 	display: inline;
 }
