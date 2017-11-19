@@ -11,10 +11,6 @@
     <input id="load1" type="button" value="Load Media" onclick="buttonPress1()">
     <input id="load2" type="button" value="Load Media" onclick="buttonPress2()">
     
-    <video id="scene1" class="scene-media" autoplay loop muted playsinline>
-      <source src="/videos/black.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
 
     <video id="scene2" class="scene-media" autoplay loop muted playsinline>
       <source src="/videos/string.mp4" type="video/mp4">
@@ -26,7 +22,6 @@
       const button1 = document.getElementById('load1');
       const button2 = document.getElementById('load2');
       const scenes = document.getElementsByClassName("scene-media");
-      const scene1 = document.getElementById('scene1');
       const scene2 = document.getElementById('scene2');
 
       window.addEventListener('keydown', function(event){
