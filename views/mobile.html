@@ -36,19 +36,6 @@
       const button = document.getElementById('start');
       const loading = document.getElementById('loading');
       const scenes = document.getElementsByClassName("scene-media");
-
-      window.addEventListener('keydown', function(event){
-        if (event.keyCode == 32){
-          socket.emit('bang');
-        }
-      });
-
-    </script>
-
-    <script type="text/javascript">
-      function mediaReady(id) {
-        console.log(id + " ready!")
-      }
     </script>
 
     <script type="text/javascript">
@@ -57,17 +44,12 @@
         scenes.item(0).play()
         scenes.item(0).style.display = "inline"
         scenes.item(1).play()
-        scenes.item(0).style.display = "inline"
+        scenes.item(1).style.display = "inline"
         scenes.item(2).play()
-        scenes.item(0).style.display = "inline"
+        scenes.item(2).style.display = "inline"
         scenes.item(3).play()
-        scenes.item(0).style.display = "inline"
+        scenes.item(3).style.display = "inline"
       });
-
     </script>
-    <script src="/js/loadScenes.js"></script>
-    <script src="/js/socketsRouter.js"></script>
-    <script src="/js/stopScene.js"></script>
-    <script src="/js/playScene.js"></script>
   </body>
 </html>
