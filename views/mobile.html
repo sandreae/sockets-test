@@ -11,32 +11,16 @@
     <p id='loading'>loading.....</p>
     <button id="start">Load Media</button>
     
-    <video id="scene1" class="scene-media" loop muted playsinline preload="none">
+    <video id="scene1" class="scene-media" loop muted playsinline>
       <source src="/videos/black.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-
-    <audio id="scene2" class="scene-media" loop playsinline>
-      <source src="/audio/squeak.mp3" type="audio/mp3">
-      Your browser does not support HTML5 audio.
-    </audio>
-    
-    <video id="scene3" class="scene-media" loop muted playsinline poster="/images/green.png">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <audio id="scene4" class="scene-media" loop playsinline>
-      <source src="/audio/fridge.mp3" type="audio/mp3">
-      Your browser does not support HTML5 audio.
-    </audio>
-
 
     <script>
       var socket = io();
       const button = document.getElementById('start');
       const loading = document.getElementById('loading');
       const scene1 = document.getElementById('scene1');
-      const scenes = document.getElementsByClassName("scene-media");
     </script>
 
     <script type="text/javascript">
@@ -44,14 +28,6 @@
         button.style.display = "none"
         scene1.play()
         scene1.style.display = "inline"
-        scenes.item(0).play()
-        scenes.item(0).style.display = "inline"
-        scenes.item(1).play()
-        scenes.item(1).style.display = "inline"
-        scenes.item(2).play()
-        scenes.item(2).style.display = "inline"
-        scenes.item(3).play()
-        scenes.item(3).style.display = "inline"
       });
     </script>
   </body>
