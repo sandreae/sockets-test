@@ -9,7 +9,6 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <p id='loading'>loading.....</p>
-    <button id="start">Load Media</button>
     
     <video id="scene1" class="scene-media" autoplay loop muted playsinline>
       <source src="/videos/black.mp4" type="video/mp4">
@@ -17,17 +16,14 @@
     </video>
 
     <script>
-      var scene1 = document.getElementById('scene1');
+      const scenes = document.getElementsByClassName("scene-media");
 
       function playVideo() {
-        scene1.style.display = "inline";
-        scene1.play()
+        var scene = scenes.item(0)
+        scene.style.display = "inline";
+        scene.play()
       }
     </script>
-
-    <input type="button" value="Play" onclick="playVideo()">
-
-
-
+    <input type="button" value="Load Media" onclick="playVideo()">
   </body>
 </html>
