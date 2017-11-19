@@ -1,6 +1,10 @@
   function playScene(x) {
-    var scene = scenes.item(x)
-    scene.play()
-    scene.style.display = 'inline'
-    console.log(scene)
+    var audioScene = audioScenes.item(x)
+    audioScene.play()
+    audioScene.style.display = 'inline'
+    console.log(audioScene)
+    var videoScene = videoScenes.item(x)
+    videoScene.play()
+    videoScene.style.display = 'inline'
+    console.log(videoScene)
   }

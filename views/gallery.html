@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='/css/stylesheet.css' />
-    <title>Gallery</title>
+    <title>stage 1</title>
   </head>
   <body>
 
@@ -11,28 +11,50 @@
     <p id='loading'>loading.....</p>
     <button id="start">Load Media</button>
     
-    <video id="scene1" class="scene-media" loop muted playsinline oncanplaythrough="mediaReady(this.id)" preload="none">
+    <video id="video-scene1" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
+      <source src="/videos/snow.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
 
-    <video id="scene2" class="scene-media" loop muted playsinline poster="/images/fuck1.png" oncanplaythrough="mediaReady(this.id)">
+    <video id="video-scene2" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
+      Your browser does not support HTML5 video.
+    </video>
+    
+    <video id="video-scene3" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
       Your browser does not support HTML5 video.
     </video>
 
-    <video id="scene3" class="scene-media" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
+    <video id="video-scene4" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
       Your browser does not support HTML5 video.
     </video>
 
-    <audio id="scene4" class="scene-media" loop playsinline oncanplaythrough="mediaReady(this.id)">
+
+
+    <audio id="audio-scene1" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
+      <source src="/audio/gogogo.mp3" type="audio/mp3">
       Your browser does not support HTML5 audio.
     </audio>
+
+    <audio id="audio-scene2" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
+      Your browser does not support HTML5 audio.
+    </audio>
+
+    <audio id="audio-scene3" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
+      Your browser does not support HTML5 audio.
+    </audio>
+
+    <audio id="audio-scene4" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
+      Your browser does not support HTML5 audio.
+    </audio>
+
 
 
     <script>
       var socket = io();
       const button = document.getElementById('start');
       const loading = document.getElementById('loading');
-      const scenes = document.getElementsByClassName("scene-media");
+      const videoScenes = document.getElementsByClassName("scene-video");
+      const audioScenes = document.getElementsByClassName("scene-audio");
 
       window.addEventListener('keydown', function(event){
         if (event.keyCode == 32){
