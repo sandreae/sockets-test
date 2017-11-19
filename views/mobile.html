@@ -8,7 +8,7 @@
   <body>
 
     <script src="/socket.io/socket.io.js"></script>
-    <input id="load1" type="button" value="Load Media" onclick="buttonPress1()">
+    <input id="load1" type="button" value="Load Media" onclick="scene1.play()">
     <input id="load2" type="button" value="Load Media" onclick="buttonPress2()">
     
     <video id="scene1" class="scene-media" loop muted playsinline>
@@ -32,10 +32,6 @@
           socket.emit('bang');
         }
       });
-      function buttonPress1() {
-        scene1.play()
-        button1.style.display = "none"
-      }
       function buttonPress2() {
         scene2.play()
         button2.style.display = "none"
