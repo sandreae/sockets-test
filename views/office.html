@@ -3,79 +3,16 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='/css/stylesheet.css' />
-    <title>stage 1</title>
+    <title>Test</title>
   </head>
   <body>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <p id='loading'>loading.....</p>
     <button id="start">Load Media</button>
-    
-    <video id="video-scene1" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
-      <source src="/videos/black.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <video id="video-scene2" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
-      <source src="/videos/string.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    
-    <video id="video-scene3" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
-      <source src="/videos/fire.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <video id="video-scene4" class="scene-video" loop muted playsinline oncanplaythrough="mediaReady(this.id)">
-      Your browser does not support HTML5 video.
-    </video>
-
-
-    <audio id="audio-scene1" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
-      <source src="/audio/squeak.mp3" type="audio/mp3">
-      Your browser does not support HTML5 audio.
-    </audio>
-
-    <audio id="audio-scene2" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
-      <source src="/audio/organ.mp3" type="audio/mp3">
-      Your browser does not support HTML5 audio.
-    </audio>
-
-    <audio id="audio-scene3" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
-      Your browser does not support HTML5 audio.
-    </audio>
-
-    <audio id="audio-scene4" class="scene-audio" loop playsinline oncanplaythrough="mediaReady(this.id)">
-      Your browser does not support HTML5 audio.
-    </audio>
-
-
-
-    <script>
-      var socket = io();
-      const button = document.getElementById('start');
-      const loading = document.getElementById('loading');
-      const videoScenes = document.getElementsByClassName("scene-video");
-      const audioScenes = document.getElementsByClassName("scene-audio");
-
-      window.addEventListener('keydown', function(event){
-        if (event.keyCode == 32){
-          socket.emit('bang');
-        }
-      });
-
-    </script>
-
-    <script type="text/javascript">
-      function mediaReady(id) {
-        console.log(id + " ready!")
-      }
-    </script>
-
-    <script src="/js/button.js"></script>
-    <script src="/js/loadScenes.js"></script>
-    <script src="/js/socketsRouter.js"></script>
-    <script src="/js/stopScene.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/starter.js"></script>
+    <script src="/js/loadMedia.js"></script>
+    <script src="/js/scenes/office.js"></script>
     <script src="/js/playScene.js"></script>
+    <script src="/js/stopScene.js"></script>
+    <script src="/js/socketsRouter.js"></script>
   </body>
 </html>

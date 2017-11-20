@@ -3,75 +3,16 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='/css/stylesheet.css' />
-    <title>stage 1</title>
+    <title>Mobile</title>
   </head>
   <body>
-
+    <button id="start">Load Media</button>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-      const videoScenes = document.getElementsByClassName("scene-video");
-      const audioScenes = document.getElementsByClassName("scene-audio");
-
-      window.addEventListener('keydown', function(event){
-        if (event.keyCode == 32){
-          socket.emit('bang');
-        }
-      });
-    </script>
-
-    <input id="load1" type="button" value="Load Media" onclick="videoScenes.item(0).play()">
-    <input id="load2" type="button" value="Load Media" onclick="videoScenes.item(1).play()">
-    <input id="load3" type="button" value="Load Media" onclick="videoScenes.item(2).play()">
-    <input id="load4" type="button" value="Load Media" onclick="videoScenes.item(3).play()">
-    <input id="load5" type="button" value="Load Media" onclick="audioScenes.item(0).play()">
-    <input id="load6" type="button" value="Load Media" onclick="audioScenes.item(1).play()">
-    <input id="load7" type="button" value="Load Media" onclick="audioScenes.item(2).play()">
-    <input id="load8" type="button" value="Load Media" onclick="audioScenes.item(3).play()">
-
-    <video id="video-scene1" class="scene-video" loop muted playsinline>
-      <source src="/videos/black.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <video id="video-scene2" class="scene-video" loop muted playsinline>
-      <source src="/videos/string.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    
-    <video id="video-scene3" class="scene-video" loop muted playsinline>
-      <source src="/videos/fire.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-
-    <video id="video-scene4" class="scene-video" loop muted playsinline>
-      Your browser does not support HTML5 video.
-    </video>
-
-
-    <audio id="audio-scene1" class="scene-audio" loop playsinline>
-      <source src="/audio/squeak.mp3" type="audio/mp3">
-      Your browser does not support HTML5 audio.
-    </audio>
-
-    <audio id="audio-scene2" class="scene-audio" loop playsinline>
-      <source src="/audio/organ.mp3" type="audio/mp3">
-      Your browser does not support HTML5 audio.
-    </audio>
-
-    <audio id="audio-scene3" class="scene-audio" loop playsinline>
-      Your browser does not support HTML5 audio.
-    </audio>
-
-    <audio id="audio-scene4" class="scene-audio" loop playsinline>
-      Your browser does not support HTML5 audio.
-    </audio>
-
-
-
-
-    <script src="/js/socketsRouter.js"></script>
-    <script src="/js/stopScene.js"></script>
+    <script src="/js/starter.js"></script>
+    <script src="/js/loadMedia.js"></script>
+    <script src="/js/scenes/mobile.js"></script>
     <script src="/js/playScene.js"></script>
+    <script src="/js/stopScene.js"></script>
+    <script src="/js/socketsRouter.js"></script>
   </body>
 </html>

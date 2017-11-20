@@ -1,10 +1,12 @@
   function stopScene(x) {
-    var audioScene = audioScenes.item(x)
-    audioScene.pause()
-    audioScene.style.display = 'none'
-    console.log(audioScene)
-    var videoScene = videoScenes.item(x)
-    videoScene.pause()
-    videoScene.style.display = 'none'
-    console.log(videoScene)
+    var scene = scenes[x]
+    console.log('stop: ', scene)
+    var video = media.namedItem(scene.video)
+    console.log('stop: ', video)
+    video.pause()
+    video.style.display = 'none'
+    var audio = media.namedItem(scene.audio)
+    console.log('stop: ', audio)
+    audio.pause()
+    audio.style.display = 'none'
   }

@@ -6,15 +6,16 @@ const INDEX = path.join(__dirname, 'index.html');
 const office = path.join(__dirname, '/views/office.html');
 const fridge = path.join(__dirname, '/views/fridge.html');
 const mobile = path.join(__dirname, '/views/mobile.html');
-const gallery = path.join(__dirname, '/views/gallery.html');
+const paintingwall = path.join(__dirname, '/views/paintingwall.html');
+const test = path.join(__dirname, '/views/test.html');
 
 const server = express()
   .use(express.static(path.join(__dirname, 'public')))
-  .use('/controller', (req, res) => res.sendFile(INDEX))
+  .use('/test', (req, res) => res.sendFile(test))
   .use('/office', (req, res) => res.sendFile(office))
   .use('/fridge', (req, res) => res.sendFile(fridge))
   .use('/mobile', (req, res) => res.sendFile(mobile))
-  .use('/gallery', (req, res) => res.sendFile(gallery))
+  .use('/paintingwall', (req, res) => res.sendFile(paintingwall))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 var track = 0;
