@@ -6,7 +6,7 @@ function loadMedia(videoFiles, audioFiles, imageFiles) {
     video.autoPlay = false;
     video.id = file + '-video'
     video.loop = true;
-    video.plasinline = true
+    video.playsinline = true
     document.body.appendChild(video);
     video.load()
   })
