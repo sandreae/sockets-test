@@ -17,6 +17,7 @@ function loadMedia(videoFiles, audioFiles, imageFiles) {
     audio.className = 'media'
     audio.id = file + '-audio'
     audio.loop = true;
+    audio.playsinline = true
     document.body.appendChild(audio);
     audio.load()
   })
@@ -27,6 +28,7 @@ function loadMedia(videoFiles, audioFiles, imageFiles) {
     video.autoPlay = false;
     video.id = file + '-image'
     video.loop = true;
+    video.playsinline = true
     document.body.appendChild(video);
     video.load()
   })
