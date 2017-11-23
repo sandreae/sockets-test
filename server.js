@@ -24,6 +24,15 @@ var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 
 const io = socketIO(server);
 
+var myVar = setInterval(myTimer, 10000);
+
+function myTimer() {
+      io.emit("stop", track);
+      nextElement()
+      io.emit("play", track);
+} 
+
+
 io.on('connection', (socket) => {
   console.log('Client connected');
   socket.on('bang', function(){

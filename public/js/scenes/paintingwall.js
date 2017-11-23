@@ -20,7 +20,7 @@ var scenes = [
   {video: 'man-video', audio: 'chromatic2-audio'},
   {video: 'man-video', audio: ''},
   /////ACT 2 (3 scenes)/////////////
-  {video: 'blank-image', audio: ''},
-  {video: 'blank-image', audio: ''},
-  {video: 'blank-image', audio: ''}
+  {video: 'blank-image', audio: 'gogogo'},
+  {video: 'blank-image', audio: 'gogogo'},
+  {video: 'blank-image', audio: 'gogogo'}
 ]
