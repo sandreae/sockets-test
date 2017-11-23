@@ -1,6 +1,6 @@
 var videoFiles = []
 var audioFiles = ['bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
-var imageFiles = ['fridge-template', 'blank']
+var imageFiles = ['fridge-template', 'blank', 'fridge', 'beer', 'face']
 
 var scenes = [
   /////ACT 1 (15 scenes)/////////////
@@ -20,7 +20,7 @@ var scenes = [
   {video: 'blank-image', audio: 'chromatic1-audio'},
   {video: 'blank-image', audio: 'chromatic2-audio'},
   /////ACT 2 (3 scenes)/////////////
-  {video: 'blank-image', audio: 'gogogo'},
-  {video: 'blank-image', audio: 'gogogo'},
-  {video: 'blank-image', audio: 'gogogo'}
+  {video: 'fridge-image', audio: 'gogogo'},
+  {video: 'beer-image', audio: 'gogogo'},
+  {video: 'face-image', audio: 'gogogo'}
 ]
