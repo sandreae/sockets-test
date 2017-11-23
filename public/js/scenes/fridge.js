@@ -1,12 +1,12 @@
 var videoFiles = []
-var audioFiles = ['bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
-var imageFiles = ['fridge-template', 'blank', 'fridge', 'beer', 'face']
+var audioFiles = ['squeak', 'hum-04', 'bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
+var imageFiles = ['white', 'fridge-template', 'blank', 'fridge', 'beer', 'face']
 
 var scenes = [
   /////ACT 1 (15 scenes)/////////////
   {video: 'blank-image', audio: ''},
-  {video: 'blank-image', audio: 'organ-audio'},
-  {video: 'blank-image', audio: 'organ-audio'},
+  {video: 'blank-image', audio: 'squeak-audio'},
+  {video: 'blank-image', audio: 'squeak-audio'},
   {video: 'blank-image', audio: ''},
   {video: 'blank-image', audio: 'bells-audio'},
   {video: 'blank-image', audio: 'bells-audio'},
