@@ -22,11 +22,11 @@ var scenes = [
   /////ACT 2 (9 scenes)/////////////
   {video: 'fridge-image', audio: 'gogogo'},
   {video: 'blank-image', audio: 'gogogo'},
-  {video: 'face-image', audio: 'gogogo'}
+  {video: 'face-image', audio: 'gogogo'},
   {video: 'blank-image', audio: 'gogogo'},
   {video: 'beer-image', audio: 'gogogo'},
   {video: 'blank-image', audio: 'gogogo'}
   {video: 'fridge-image', audio: 'gogogo'},
   {video: 'blank-image', audio: 'gogogo'},
   {video: 'face-image', audio: 'gogogo'}
-]
+  ]
