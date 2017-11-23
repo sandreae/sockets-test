@@ -23,9 +23,9 @@ var scenes = [
   {video: 'black-video', audio: 'organ'},
   {video: 'black-video', audio: 'organ'},
   {video: 'black-video', audio: 'organ'},
-  {video: 'green-image', audio: 'gogogo'},
-  {video: 'green-image', audio: 'gogogo'},
-  {video: 'green-image', audio: 'gogogo'},
+  {video: 'green-image', audio: 'gogogo-audio'},
+  {video: 'green-image', audio: 'gogogo-audio'},
+  {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'blank-image', audio: 'organ'},
   {video: 'blank-image', audio: 'organ'},
   {video: 'blank-image', audio: 'organ'}

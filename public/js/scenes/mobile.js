@@ -20,13 +20,13 @@ var scenes = [
   {video: 'man-video', audio: ''},
   {video: 'man-video', audio: 'chromatic1-audio'},
   /////ACT 2 (9 scenes)/////////////
-  {video: 'green-image', audio: 'gogogo'},
-  {video: 'blank-image', audio: 'gogogo'},
-  {video: 'green-image', audio: 'gogogo'},
-  {video: 'blank-image', audio: 'gogogo'},
-  {video: 'green-image', audio: 'gogogo'},
-  {video: 'blank-image', audio: 'gogogo'},
-  {video: 'green-image', audio: 'gogogo'},
-  {video: 'blank-image', audio: 'gogogo'},
-  {video: 'blank-image', audio: 'gogogo'}
+  {video: 'green-image', audio: 'gogogo-audio'},
+  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'green-image', audio: 'gogogo-audio'},
+  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'green-image', audio: 'gogogo-audio'},
+  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'green-image', audio: 'gogogo-audio'},
+  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'blank-image', audio: 'gogogo-audio'}
 ]
