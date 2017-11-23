@@ -26,7 +26,13 @@ var scenes = [
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'template-image', audio: 'gogogo-audio'},
-  {video: 'template-image', audio: 'gogogo-audio'},
-  {video: 'template-image', audio: 'gogogo-audio'}
+  {video: 'template-image', audio: 'taisho-audio'},
+  {video: 'template-image', audio: 'taisho-audio'},
+  {video: 'template-image', audio: 'taisho-audio'},
+  /////ACT 3 (5 scenes)/////////////
+  {video: 'white-image', audio: 'hum-01-audio'},
+  {video: 'white-image', audio: 'hum-01-audio'},
+  {video: 'white-image', audio: 'hum-01-audio'},
+  {video: 'white-image', audio: 'hum-01-audio'},
+  {video: 'white-image', audio: 'hum-01-audio'}
 ]

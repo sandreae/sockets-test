@@ -28,6 +28,11 @@ var scenes = [
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'blank-image', audio: 'organ-audio'},
   {video: 'blank-image', audio: 'organ-audio'},
-  {video: 'blank-image', audio: 'organ-audio'}
-  /////ACT 2 (3 scenes)/////////////
+  {video: 'blank-image', audio: 'organ-audio'},
+  /////ACT 3 (5 scenes)/////////////
+  {video: 'white-image', audio: 'hum-02-audio'},
+  {video: 'white-image', audio: 'hum-02-audio'},
+  {video: 'white-image', audio: 'hum-02-audio'},
+  {video: 'white-image', audio: 'hum-02-audio'},
+  {video: 'white-image', audio: 'hum-02-audio'}
 ]
