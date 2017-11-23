@@ -20,14 +20,14 @@ var scenes = [
   {video: 'man-video', audio: ''},
   {video: 'man-video', audio: ''},
   /////ACT 2 (9 scenes)/////////////
-  {video: 'black-video', audio: 'organ'},
-  {video: 'black-video', audio: 'organ'},
-  {video: 'black-video', audio: 'organ'},
+  {video: 'black-video', audio: 'organ-audio'},
+  {video: 'black-video', audio: 'organ-audio'},
+  {video: 'black-video', audio: 'organ-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'blank-image', audio: 'organ'},
-  {video: 'blank-image', audio: 'organ'},
-  {video: 'blank-image', audio: 'organ'}
+  {video: 'blank-image', audio: 'organ-audio'},
+  {video: 'blank-image', audio: 'organ-audio'},
+  {video: 'blank-image', audio: 'organ-audio'}
   /////ACT 2 (3 scenes)/////////////
 ]
