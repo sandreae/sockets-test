@@ -20,9 +20,9 @@ var scenes = [
   {video: 'man-video', audio: 'chromatic2-audio'},
   {video: 'blank-image', audio: ''},
   /////ACT 2 (9 scenes)/////////////
-  {video: 'fuck-image', audio: 'gogogo-audio'},
-  {video: 'fuck-image', audio: 'gogogo-audio'},
-  {video: 'fuck-image', audio: 'gogogo-audio'},
+  {video: 'template-image', audio: 'gogogo-audio'},
+  {video: 'template-image', audio: 'gogogo-audio'},
+  {video: 'template-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
