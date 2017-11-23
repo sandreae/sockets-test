@@ -20,7 +20,7 @@ const server = express()
 
 var track = 0;
 var myIndex = 0;
-var myArray = [0, 1, 2, 3]
+var myArray = [0, 1, 2, 3, 4]
 
 const io = socketIO(server);
 
