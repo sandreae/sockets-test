@@ -1,6 +1,6 @@
 var videoFiles = ['drillsmall', 'black', 'snow', 'string', 'wrap', 'man']
-var audioFiles = ['hum-02', 'bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
-var imageFiles = ['white', 'fuck', 'green', 'template', 'blank']
+var audioFiles = ['taisho-echo', 'fridge2', 'hum-02', 'bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
+var imageFiles = ['paintingwall-green', 'paintingwall-green-pink', 'paintingwall-green-pink-yellow', 'paintingwall-green-peas', 'white', 'fuck', 'green', 'template', 'blank']
 
 var scenes = [
   /////ACT 1 (15 scenes)/////////////
@@ -26,13 +26,26 @@ var scenes = [
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'blank-image', audio: 'organ-audio'},
-  {video: 'blank-image', audio: 'organ-audio'},
-  {video: 'blank-image', audio: 'organ-audio'},
+  {video: 'black-image', audio: 'organ-audio'},
+  {video: 'black-image', audio: 'organ-audio'},
+  {video: 'black-image', audio: 'organ-audio'},
   /////ACT 3 (5 scenes)/////////////
+  {video: 'white-image', audio: 'fridge2-audio'},
+  {video: 'white-image', audio: 'fridge2-audio'},
   {video: 'white-image', audio: 'hum-02-audio'},
+  {video: 'white-image', audio: 'fridge2-audio'},
   {video: 'white-image', audio: 'hum-02-audio'},
-  {video: 'white-image', audio: 'hum-02-audio'},
-  {video: 'white-image', audio: 'hum-02-audio'},
-  {video: 'white-image', audio: 'hum-02-audio'}
+  /////ACT 4 (12 scenes)/////////////
+  {video: 'paintingwall-green-peas-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-peas-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-peas-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'taisho-echo-audio'},
+  {video: 'paintingwall-green-image', audio: 'taisho-echo-audio'}
 ]

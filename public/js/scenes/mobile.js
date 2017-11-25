@@ -1,6 +1,6 @@
 var videoFiles = ['black', 'snow', 'string', 'wrap', 'man']
-var audioFiles = ['squeak', 'hum-03', 'bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
-var imageFiles = ['white', 'fuck', 'green', 'template', 'blank']
+var audioFiles = ['cracked','squeak', 'hum-03', 'bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
+var imageFiles = ['paintingwall-green', 'paintingwall-green-pink', 'paintingwall-green-pink-yellow', 'paintingwall-green-peas', 'black', 'white', 'fuck', 'green', 'template', 'blank']
 
 var scenes = [
   /////ACT 1 (15 scenes)/////////////
@@ -21,19 +21,33 @@ var scenes = [
   {video: 'man-video', audio: 'chromatic1-audio'},
   /////ACT 2 (9 scenes)/////////////
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'black-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'black-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'black-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'blank-image', audio: 'gogogo-audio'},
+  {video: 'black-image', audio: 'gogogo-audio'},
   {video: 'blank-image', audio: 'gogogo-audio'},
   /////ACT 3 (5 scenes)/////////////
   {video: 'white-image', audio: 'hum-03-audio'},
+  {video: 'white-image', audio: ''},
+  {video: 'white-image', audio: ''},
   {video: 'white-image', audio: 'hum-03-audio'},
   {video: 'white-image', audio: 'hum-03-audio'},
-  {video: 'white-image', audio: 'hum-03-audio'},
-  {video: 'white-image', audio: 'hum-03-audio'}
+
+  {video: 'paintingwall-green-peas-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-peas-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-peas-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'cracked-audio'},
+  {video: 'paintingwall-green-image', audio: 'cracked-audio'}
+
 
 ]
