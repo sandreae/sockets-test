@@ -1,6 +1,6 @@
 var videoFiles = ['black', 'drillsmall', 'fire', 'man', 'snow', 'string', 'wrap']
 var audioFiles = ['taisho', 'squeak', 'hum-01', 'bells', 'fridge2', 'gogogo', 'crackle', 'epic2', 'chromatic2', 'epic1', 'chromatic1', 'organ']
-var imageFiles = ['paintingwall-green', 'paintingwall-green-pink', 'paintingwall-green-pink-yellow', 'paintingwall-green-peas', 'white', 'fuck', 'green', 'template', 'blank', 'black']
+var imageFiles = ['template', 'paintingwall-green', 'paintingwall-green-pink', 'paintingwall-green-pink-yellow', 'paintingwall-green-peas', 'white', 'fuck', 'green', 'template', 'blank', 'black']
 
 var scenes = [
   /////ACT 1 (15 scenes)/////////////
@@ -20,33 +20,33 @@ var scenes = [
   {video: 'man-video', audio: 'chromatic2-audio'},
   {video: 'black-image', audio: ''},
   /////ACT 2 (9 scenes)/////////////
-  {video: 'black-image', audio: 'gogogo-audio'},
-  {video: 'black-image', audio: 'gogogo-audio'},
-  {video: 'black-image', audio: 'gogogo-audio'},
-  {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'black-image', audio: 'gogogo-audio'},
-  {video: 'black-image', audio: 'gogogo-audio'},
-  {video: 'black-image', audio: 'gogogo-audio'},
+  {video: 'black-video', audio: 'gogogo-audio'},
+  {video: 'black-video', audio: 'gogogo-audio'},
+  {video: 'black-video', audio: 'gogogo-audio'},
+  {video: 'green-video', audio: 'gogogo-audio'},
+  {video: 'green-video', audio: 'gogogo-audio'},
+  {video: 'green-video', audio: 'gogogo-audio'},
+  {video: 'black-video', audio: 'gogogo-audio'},
+  {video: 'black-video', audio: 'gogogo-audio'},
+  {video: 'black-video', audio: 'gogogo-audio'},
   /////ACT 3 (5 scenes)/////////////
-  {video: 'white-image', audio: ''},
-  {video: 'white-image', audio: 'hum-01-audio'},
-  {video: 'white-image', audio: ''},
-  {video: 'white-image', audio: ''},
-  {video: 'white-image', audio: 'hum-01-audio'},
+  {video: 'template-image', audio: ''},
+  {video: 'template-image', audio: 'hum-01-audio'},
+  {video: 'template-image', audio: ''},
+  {video: 'template-image', audio: ''},
+  {video: 'template-image', audio: 'hum-01-audio'},
   /////ACT 4 (12 scenes)/////////////
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'},
-  {video: 'drillsmall-video', audio: 'taisho-audio'}
+  {video: 'paintingwall-green-peas-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-peas-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-peas-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-pink-yellow-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-pink-image', audio: 'taisho-audio'},
+  {video: 'paintingwall-green-image', audio: 'taisho-audio'}
 
 ]
