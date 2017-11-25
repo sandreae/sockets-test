@@ -31,10 +31,10 @@ var scenes = [
   {video: 'face-image', audio: 'gogogo-audio'},
   /////ACT 3 (5 scenes)/////////////
   {video: 'fridge-template-2-image', audio: 'hum-04-audio'},
-  {video: 'fridge-template-2-image', audio: ''},
+  {video: 'fridge-template-3-image', audio: ''},
   {video: 'fridge-template-2-image', audio: 'hum-04-audio'},
   {video: 'fridge-template-3-image', audio: ''},
-  {video: 'fridge-template-3-image', audio: 'hum-04-audio'},
+  {video: 'fridge-template-2-image', audio: 'hum-04-audio'},
   /////ACT 4 (12 scenes)/////////////
   {video: 'blank-image', audio: 'taisho-echo-audio'},
   {video: 'blank-image', audio: 'taisho-echo-audio'},
