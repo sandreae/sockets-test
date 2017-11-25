@@ -22,13 +22,13 @@ var scenes = [
   /////ACT 2 (9 scenes)/////////////
   {video: 'beer-image', audio: 'gogogo-audio'},
   {video: 'beer-image', audio: 'gogogo-audio'},
-  {video: 'face-image', audio: 'gogogo-audio'},
-  {video: 'face-image', audio: 'gogogo-audio'},
-  {video: 'beer-image', audio: 'gogogo-audio'},
   {video: 'beer-image', audio: 'gogogo-audio'},
   {video: 'face-image', audio: 'gogogo-audio'},
   {video: 'face-image', audio: 'gogogo-audio'},
   {video: 'face-image', audio: 'gogogo-audio'},
+  {video: 'beer-image', audio: 'gogogo-audio'},
+  {video: 'beer-image', audio: 'gogogo-audio'},
+  {video: 'beer-image', audio: 'gogogo-audio'},
   /////ACT 3 (5 scenes)/////////////
   {video: 'fridge-template-2-image', audio: 'hum-04-audio'},
   {video: 'fridge-template-3-image', audio: ''},

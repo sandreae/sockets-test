@@ -26,9 +26,9 @@ var scenes = [
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
   {video: 'green-image', audio: 'gogogo-audio'},
-  {video: 'black-image', audio: 'organ-audio'},
-  {video: 'black-image', audio: 'organ-audio'},
-  {video: 'black-image', audio: 'organ-audio'},
+  {video: 'black-video', audio: 'organ-audio'},
+  {video: 'black-video', audio: 'organ-audio'},
+  {video: 'black-video', audio: 'organ-audio'},
   /////ACT 3 (5 scenes)/////////////
   {video: 'white-image', audio: 'fridge2-audio'},
   {video: 'white-image', audio: 'fridge2-audio'},
