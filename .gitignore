@@ -1,5 +1,10 @@
 # NPM packages folder.
 node_modules
+<<<<<<< HEAD
+=======
+public/videos
+public/audio
+>>>>>>> 05e2221502f2b57610f627e8dbc92aceb4d2309a
 
 # Local testing
 .env
